@@ -1,0 +1,341 @@
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 20px;
+}
+
+body {
+  padding: 0 5%;
+}
+
+.nav-list {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.menuRecomend {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.menuFillter {
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.menuFillter ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.foodFillter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.front-back {
+  background-image: url('/img/top-back.png');
+  content: cover;
+  height: 220px;
+  text-align: center;
+}
+.top-botton {
+  top: 150px;
+  position: relative;
+}
+.front-sakana {
+  height: 220px;
+  width: 100%;
+}
+#mainContent {
+  flex-wrap: wrap;
+  display: flex;
+}
+.menuCountArea {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.menuWrapper {
+  width: 150px;
+  margin-right: 10px;
+}
+
+.menuImage {
+  width: 100px;
+}
+
+.menuSugar {
+  text-align: center;
+  font-size: 80%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px 0;
+  margin: 10px 0;
+  width: 70%;
+}
+
+.menuText {
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.addButtun {
+  border: none;
+  background: #588f0e;
+  color: white;
+  width: 40%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.deleteButtun {
+  border: none;
+  background: #d9d9d9;
+  color: white;
+  width: 40%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* 7食選択の領域 */
+.choisedMenu {
+  background: gainsboro;
+  padding: 5% 0;
+  text-align: center;
+  width: 110%;
+  margin: 0 auto;
+  position: relative;
+  right: 5%;
+  overflow: hidden;
+}
+
+.choisedMenuFinish {
+  background: #588f0e;
+  padding: 5% 0;
+  text-align: center;
+  width: 110%;
+  margin: 0 auto;
+  position: relative;
+  right: 5%;
+  overflow: hidden;
+  color: white;
+}
+
+/* プルダウンボタンcss */
+.cp_ipselect {
+  overflow: hidden;
+  text-align: center;
+}
+.cp_ipselect select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+  display: none;
+}
+.cp_ipselect.cp_sl01 {
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+}
+.cp_ipselect.cp_sl01::before {
+  position: absolute;
+  top: 0.8em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666666;
+  pointer-events: none;
+}
+.cp_ipselect.cp_sl01 select {
+  padding: 8px 38px 8px 8px;
+  color: #666666;
+}
+
+/* food */
+#food {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px 0;
+}
+.none {
+  display: none;
+}
+
+.foodContentText {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  border: 2px solid #dddddd;
+  padding: 10px 0;
+}
+
+/* 選択 */
+.foodContentClick {
+  background: crimson;
+  color: white;
+}
+
+/* payment */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* デフォルトのラジオボタンデザインを無効化 */
+.container input {
+  position: absolute;
+  justify-content: center;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* カスタムラジオボタンの作成 */
+.checkmark {
+  position: absolute;
+  justify-content: center;
+  top: 7px;
+  left: 7px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* マウスオーバーのリアクション */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* チェックした時のカラーリング */
+.container input:checked ~ .checkmark {
+  background-color: #4caf50;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 70%;
+  background: white;
+}
+
+/* menuDtail */
+.menuTitle {
+  font-size: 25px;
+  padding: 5px 20px;
+}
+.closeButtun {
+  border: none;
+  background: #d9d9d9;
+  color: white;
+  width: 40%;
+  padding: 5px;
+  border-radius: 5p;
+}
+
+.addMenuButtun {
+  border: none;
+  background: #588f0e;
+  color: white;
+  width: 40%;
+  padding: 5px;
+  border-radius: 5px;
+}
+.buttonArea {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.menuDetailImage {
+  width: 100%;
+}
+
+/* 栄養素 */
+.nutrientWrapper {
+  flex-wrap: wrap;
+  display: flex;
+  border: 1px solid #30a713;
+}
+.nutrientDiv {
+  width: calc(100% / 3);
+  border: 1px solid #30a713;
+  text-align: center;
+  padding: 10px;
+}
+.nutrientDiv p {
+  margin-bottom: 0;
+}
+
+.closeMenuButton {
+  background: green;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.closeWrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.menuImage {
+  width: 100%;
+}
+
+.orderImage {
+  margin-bottom: 20px;
+}
+
+.inputBottom {
+  margin-bottom: 20px;
+}
